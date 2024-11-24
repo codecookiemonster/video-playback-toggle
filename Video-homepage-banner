@@ -1,0 +1,146 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="video-container">
+    <div class="text-content">
+        <h1>Introducing The Bake Box</h1>
+        <p class="description">The Bake Box is Now OPEN! Choose from a selection of tasty cookies and bakes, pay with ease, and enjoy your sweet treat!🍪</p>
+    </div>
+    <video id="banner-video" class="responsive-video" autoplay loop playsinline onclick="toggleVideo()">
+        <source src="https://cdn.shopify.com/videos/c/o/v/e2c0c52493d04f4396a8f423fd0346c6.mp4" type="video/mp4">
+    </video>
+    <div class="play-button-container" onclick="startVideo()">
+        <button class="play-button"><i class="fas fa-play"></i></button>
+    </div>
+    <div class="cta-container">
+        <a href="https://linzimaries.com/blogs/latest-news-sweet-updates-from-linzi-maries/introducing-linzi-marie-s-bake-box-the-sweetest-spot-in-leighton-buzzard" class="cta-button">More Details Here</a>
+    </div>
+</div>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f2de;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.responsive-video {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    transform: scale(0.9);
+}
+.text-content {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+.text-content h1 {
+    font-size: 4rem;
+    color: #e50185;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.text-content .description {
+    font-size: 1.2rem;
+    color: #60250a;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.play-button-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.play-button {
+    padding: 20px;
+    font-size: 3rem;
+    background-color: rgba(229, 1, 133, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.play-button i {
+    font-size: 2rem;
+}
+.play-button:hover {
+    background-color: rgba(212, 0, 117, 0.8);
+}
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #e50185;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #d40075;
+}
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        padding: 10px;
+    }
+  .text-content h1 {
+        font-size: 3rem;
+    }
+   .text-content .description {
+        font-size: 1rem;
+    }
+ .responsive-video {
+        height: 300px;
+        transform: none;
+    }
+.play-button-container {
+        display: block;
+    }
+}
+</style>
+
+<script>
+function startVideo() {
+    var video = document.getElementById('banner-video');
+    var playButton = document.querySelector('.play-button-container');
+    
+    video.play();
+    playButton.style.display = 'none';
+}
+
+function toggleVideo() {
+    var video = document.getElementById('banner-video');
+    var playButton = document.querySelector('.play-button-container');
+    
+    if (video.paused) {
+        video.play();
+        playButton.style.display = 'none';
+    } else {
+        video.pause();
+        playButton.style.display = 'block';
+    }
+}
+</script>
